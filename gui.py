@@ -78,7 +78,7 @@ if __name__ == '__main__':
 
 	bar = TabBar(root, "Info")
 	
-	tab1 = Tab(root, "Port checker")				# notice how this one's master is the root instead of the bar
+	tab1 = Tab(root, "Port checker")				# notice how this one's master is	the root instead of the bar
 	Label(tab1, text="Check the running ports of your pc.\n\n\n\n\n", bg="white", fg="red").pack(side=LEFT, expand=YES, fill=BOTH)
 	txt1 = Text(tab1, width=800, height=400)
 	txt1.focus()
