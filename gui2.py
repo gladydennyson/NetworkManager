@@ -1,7 +1,5 @@
-
-
-
-
+import chatserver as cserver
+import chatclient as cclient
 from tkinter import *
 from tkinter import ttk
  
@@ -34,6 +32,7 @@ page3 = ttk.Frame(nb)
 
 def serverclick():
  	Label(page3, bg='white', text="The server has been started").pack(side=BOTTOM)
+ 	cserver.Main()
 
 def clientclick():
  	Label(page3, bg='white', text="The client has been started").pack(side=BOTTOM)
@@ -44,7 +43,7 @@ def clientclick():
 #mybutton.grid(row=1,column=1)
 #mybutton1 = Button(page3, text="MyButton") 
 #mybutton1.grid(row=50,column=1)
-Button(page3, text="START SERVER", width=25,bg="#ba0000",command=serverclick).pack(side=TOP,padx=20, pady=20)
+Button(page3, text="START SERVER", width=25,bg="#ba0000",command=serverclick() ).pack(side=TOP,padx=20, pady=20)
 Button(page3, text="START CLIENT", width=25,bg="#ba0000",command=clientclick).pack(side=TOP,padx=20)
 nb.add(page3, text='Server Client Chat')
  
