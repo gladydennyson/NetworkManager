@@ -27,8 +27,12 @@ page2 = ttk.Frame(nb)
 nb.add(page2, text='File Sharer')
 
 page3 = ttk.Frame(nb)
-Button(page3, text="START SERVER", width=25,command=(lambda: write("You have started the server"))).pack(side=TOP)
-Button(page3, text="START CLIENT", width=25,command=(lambda: write("You have started the client"))).pack(side=TOP)
+#mybutton = Button(page3, text="MyButton") 
+#mybutton.grid(row=1,column=1)
+#mybutton1 = Button(page3, text="MyButton") 
+#mybutton1.grid(row=50,column=1)
+Button(page3, text="START SERVER", width=25,bg="#ba0000",command=(lambda: write("You have started the server"))).pack(side=TOP,padx=20, pady=20)
+Button(page3, text="START CLIENT", width=25,bg="#ba0000",command=(lambda: write("You have started the client"))).pack(side=TOP,padx=20)
 nb.add(page3, text='Server Client Chat')
  
  
