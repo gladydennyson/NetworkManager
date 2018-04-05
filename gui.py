@@ -14,6 +14,7 @@ working ports of the pc.
 
 from tkinter import *
 
+
 BASE = RAISED
 SELECTED = FLAT
 
@@ -82,21 +83,21 @@ if __name__ == '__main__':
 	txt1 = Text(tab1, width=800, height=400)
 	txt1.focus()
 	txt1.pack(side=LEFT, fill=X, expand=YES)
-	Button(tab1, text="PRESS ME!", command=(lambda: write("YOU PRESSED ME!"))).pack(side=BOTTOM, fill=BOTH, expand=YES)
-	Button(tab1, text="KILL THIS TAB", command=(lambda: bar.delete("Wow..."))).pack(side=BOTTOM, fill=BOTH, expand=YES)
 	
 	tab2 = Tab(root, "File Sharing")
 	Label(tab2, text="Tab fo file sharing", bg='black', fg='#3366ff').pack(side=TOP, fill=BOTH, expand=YES)
 	txt = Text(tab2, width=800, height=400)
 	txt.focus()
 	txt.pack(side=LEFT, fill=X, expand=YES)
-	Button(tab2, text="Get", command=(lambda: write(txt.get('1.0', END).strip()))).pack(side=BOTTOM, expand=YES, fill=BOTH)
 
+	
 	tab3 = Tab(root, "Info")
-	Label(tab3, bg='white', text="This tab was given as an argument to the TabBar constructor.\nABOUT:\n"+info).pack(side=LEFT, expand=YES, fill=BOTH)
-	txt3 = Text(tab3, width=800, height=400)
-	txt3.focus()
-	txt3.pack(side=LEFT, fill=X, expand=YES)
+	Label(tab3, text="Tab fo chat", bg='black', fg='#3366ff',width=400,height=800).pack(side=TOP, fill=X, expand=YES)
+	
+	
+
+	Button(tab3, text="PRESS ME!", command=(lambda: write("YOU PRESSED ME!"))).pack(side=BOTTOM, fill=BOTH, expand=YES)
+
 	bar.add(tab1)                   # add the tabs to the tab bar
 	bar.add(tab2)
 	bar.add(tab3)
